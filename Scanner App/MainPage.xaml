@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Scanner_App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Scanner_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="250" />
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txt_ScannedData" Grid.Column="1" BorderThickness="3"  HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" Width= "{Binding ElementName=LeftColumnDefinition, Path=Width}"  MinWidth="150" MinHeight="57" Text="Scanned data will be shown here" TextChanged="txt_ScannedData_TextChanged"></TextBox>
+        <Button Margin="2,0,0,0"  Grid.Column="2" Content="Scan" x:Name="btn_Scan"  HorizontalAlignment ="Center" Width="125" Height="57" Click="Scan_Button_Click"/>
+        <ProgressRing Grid.Column="1"  Grid.Row="0" Grid.RowSpan="3"  Height="100" Width="100" Foreground="#5bc5c5" x:Name="pr_scan"></ProgressRing>
+        <TextBlock Grid.Column="1"  Grid.Row="1" Grid.RowSpan="4" HorizontalAlignment="Center" Name="Info_Text" Text="Turning Scanner On..." FontSize="22"/>
+    </Grid>
+</Page>

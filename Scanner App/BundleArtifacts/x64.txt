@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Abdul Rehman\source\repos\ScannerApp-master\Scanner App\bin\x64\Debug\Scanner App_1.0.20.0_x64_Debug.appx
+SymbolPackage=C:\Users\Abdul Rehman\Desktop\Scanner Setup\Scanner App_1.0.20.0_Debug_Test\Scanner App_1.0.20.0_x64_Debug.appxsym
